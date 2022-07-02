@@ -17,7 +17,7 @@ var isValidNumber = Int32.TryParse(input, out int number);
 
 Console.WriteLine($"Sum of numbers is {CalculateSum(number)}");
 */
-List<int> GetNumbers()                  //Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+void GetNumbers()                  //Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 {
     var random = new Random();
     var list = new List<int>();
@@ -27,9 +27,7 @@ List<int> GetNumbers()                  //Напишите программу, �
         var randomNumber = random.Next(0, 1000);
         list.Add(randomNumber);
     }
-
-    return list;
+    Console.WriteLine("Generated 8 numbers are: ");
+    foreach (var number in list) Console.WriteLine(number);
 }
-
-Console.WriteLine("Generated 8 numbers are: ");
-foreach (var number in GetNumbers()) Console.WriteLine(number);
+GetNumbers();
